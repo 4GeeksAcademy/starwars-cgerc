@@ -44,11 +44,11 @@ export const Home = () => {
                 <h5 className="card-title">{item.name}</h5>
                 <div className="d-flex gap-2">
                   <Link to={`/${type}/${item.uid}`} className="btn btn-outline-primary">
-                    Details
+                    Learn more!
                   </Link>
                   <button
                     className={`btn btn-outline-${
-                      isFavorite(item.uid, type) ? "danger" : "success"
+                      isFavorite(item.uid, type) ? "danger" : "warning"
                     }`}
                     onClick={() =>
                       isFavorite(item.uid, type)
@@ -56,7 +56,7 @@ export const Home = () => {
                         : addFavorite({ uid: item.uid, name: item.name, type })
                     }
                   >
-                    {isFavorite(item.uid, type) ? "Remove" : "Add to Favorites"}
+                    {isFavorite(item.uid, type) ? "Remove" : "❤️"}
                   </button>
                 </div>
               </div>
