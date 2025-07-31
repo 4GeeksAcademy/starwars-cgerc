@@ -31,6 +31,7 @@ export const Descripcion = () => {
         </div>
       ) : item ? (
         <div className="card">
+           <img src="..." className="card-img-top" alt="..."></img>
           <div className="card-body">
             <h5 className="card-title">{item.name}</h5>
             {type === "people" && (

@@ -47,7 +47,7 @@ export const Navbar = () => {
               ))
             ) : (
               <li>
-                <span className="dropdown-item text-muted">No favorites yet</span>
+                <span className="dropdown-item text-muted">(empty)</span>
               </li>
             )}
           </ul>

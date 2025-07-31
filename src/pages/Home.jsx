@@ -77,7 +77,7 @@ export const Home = () => {
         </div>
       ) : (
         <>
-          {renderList(people, "people", "People")}
+          {renderList(people, "people", "Characters")}
           {renderList(vehicles, "vehicles", "Vehicles")}
           {renderList(planets, "planets", "Planets")}
         </>
