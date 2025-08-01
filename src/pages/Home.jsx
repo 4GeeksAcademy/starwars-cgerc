@@ -1,4 +1,4 @@
-// src/components/Home.js
+
 import { useState, useEffect, useContext } from "react";
 import  {FavoritesContext}  from "./FavoritesContext";
 import { Link } from "react-router-dom";

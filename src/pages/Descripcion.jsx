@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -21,6 +20,23 @@ export const Descripcion = () => {
       });
   }, [type, id]);
 
+  
+  const getImageUrl = (type, id) => {
+    const baseUrl = "https://github.com/breatheco-de/swapi-images/blob/master/public/images";
+    switch (type) {
+      case "people":
+        return `${baseUrl}/people/${id}.jpg?raw=true`;
+      case "vehicles":
+        return `${baseUrl}/vehicles/${id}.jpg?raw=true`;
+      case "planets":
+        return `${baseUrl}/planets/${id}.jpg?raw=true`;
+      case "films":
+        return `${baseUrl}/films/${id}.jpg?raw=true`;
+      default:
+        return "https://via.placeholder.com/400x200?text=No+Image"; // Imagen por defecto
+    }
+  };
+
   return (
     <div className="container mt-4">
       {loading ? (
@@ -30,8 +46,13 @@ export const Descripcion = () => {
           </div>
         </div>
       ) : item ? (
-        <div className="card">
-           <img src="..." className="card-img-top" alt="..."></img>
+        <div className="card align-items-center">
+          <img
+            src={getImageUrl(type, id)}
+            className="card-img-top"
+            alt={item.name || "Star Wars Item"}
+            style={{ width: "200px", height: "auto" }}
+          />
           <div className="card-body">
             <h5 className="card-title">{item.name}</h5>
             {type === "people" && (
@@ -64,3 +85,5 @@ export const Descripcion = () => {
     </div>
   );
 };
+
+export default Descripcion;

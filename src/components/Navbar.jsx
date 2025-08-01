@@ -7,10 +7,10 @@ export const Navbar = () => {
   const { favorites, removeFavorite } = useContext(FavoritesContext);
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-light bg-black">
       <div className="container d-flex justify-content-between align-items-center">
         <img
-          src="https://www.pngall.com/wp-content/uploads/5/Star-Wars-Logo-Transparent.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png"
           className="card-img-top"
           alt="logo-starwars"
           style={{ width: "100px" }}

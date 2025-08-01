@@ -25,7 +25,7 @@ export const FavoritesProvider = ({ children }) => {
   const removeFavorite = (uid, type) => {
     const favorite = favorites.find((fav) => fav.uid === uid && fav.type === type);
     if (favorite) {
-      // Fallback local (eliminamos la simulación de fetch si no usas MockAPI)
+      
       setFavorites((prev) => prev.filter((fav) => !(fav.uid === uid && fav.type === type)));
     }
   };
